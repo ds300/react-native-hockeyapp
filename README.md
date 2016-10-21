@@ -16,24 +16,11 @@ npm install react-native-hockeyapp --save
 
 ## iOS
 
-You will need:
-
-CocoaPods ([Setup](https://guides.cocoapods.org/using/getting-started.html#installation))
-
-### Podfile
-
-Add to your `ios/Podfile`:
-```ruby
-pod "HockeySDK"
-```
-
-Run `pod install`
-
-### Add Pods.xcodeproj to your project
-Drag-and-drop ./ios/Pods/Pods.xcodeproj into your Project > Libraries.
+### Add HockeySDK.embeddedframework to your project
+Drag-and-drop ./node_modules/react-native-hockeyapp/HockeySDK-iOS/HockeySDK.embeddedframework into your Project > Frameworks. (make sure to 'Create Groups' instead of 'Create folder references')
 
 ### Add the RNHockeyApp/ folder to your project
-Drag-and-drop files from ./node_modules/react-native-hockeyapp/RNHockeyApp into your Project > Libraries.
+Drag-and-drop ./node_modules/react-native-hockeyapp/RNHockeyApp into your Project > Libraries.
 
 ### Changes to AppDelegate.m
 If you wish to use Device UUID authentication or Web authentication, the following must be added to `ios/AppDelegate.m`
